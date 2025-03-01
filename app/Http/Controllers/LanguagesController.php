@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 
 class LanguagesController extends Controller
 {
-    public function index()
+    public function langue()
+    {
+        return response()->json(Language::getAllLanguages());
+    }
+       public function index()
     {
         return response()->json(Language::getAllLanguages());
     }
